@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ergaiesses</title>
+    <title>Your Novel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,22 +13,27 @@
         <h1>Ergaieses</h1>
     </header>
 
-    <!-- Chapter Slider -->
-    <div class="chapter-slider">
-        <label for="chapter-slider">Chapter: </label>
-        <input type="range" id="chapter-slider" min="1" max="10" value="1" oninput="updateChapter()">
-        <span id="chapter-title">Chapter 1: Tradegy</span>
+    <!-- Chapter Dropdown -->
+    <div class="chapter-dropdown">
+        <label for="chapter-select">Select Chapter: </label>
+        <select id="chapter-select" onchange="changeChapterFromDropdown()">
+            <option value="1">Ch 1: The Beginning</option>
+            <option value="2">Ch 2: The Dark Reunion</option>
+            <option value="3">Ch 3: The Betrayal</option>
+            <option value="4">Ch 4: The Reckoning</option>
+            <!-- Add more chapters as needed -->
+        </select>
     </div>
 
     <!-- Content Section -->
     <main id="content">
-        <p>You can see this?</p>
+        <p>Welcome to the first chapter of your novel. The story begins...</p>
     </main>
 
     <!-- Navigation Buttons -->
     <div class="navigation">
-        <button id="prev-btn" onclick="changeChapter(-1)">Previous</button>
-        <button id="next-btn" onclick="changeChapter(1)">Next</button>
+        <button id="prev-btn" onclick="changeChapter(currentChapter - 1)">Previous</button>
+        <button id="next-btn" onclick="changeChapter(currentChapter + 1)">Next</button>
     </div>
 
     <script src="script.js"></script>
