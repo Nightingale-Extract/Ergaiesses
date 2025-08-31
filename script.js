@@ -1,10 +1,10 @@
 let currentChapter = 1;
 
 const chapters = [
-    "Ch 1: The Beginning",
-    "Ch 2: The Dark Reunion",
-    "Ch 3: The Betrayal",
-    "Ch 4: The Reckoning"
+    "Ch 1: Tradegy",
+    "Ch 2: A wicked revival",
+    "Ch 3: Chimera",
+    "Ch 4: He walks amongst us"
     // Add more chapter titles here
 ];
 
