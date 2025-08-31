@@ -9,10 +9,10 @@ const chapters = [
 ];
 
 const content = [
-    "Welcome to the first chapter of your novel. The story begins...",
-    "In the dark corners of the city, a long-lost friendship is rekindled.",
-    "Betrayal strikes as an old friend turns against the hero.",
-    "The hero stands at the crossroads, facing an uncertain future."
+    "Chapter 1 PEASANTS",
+    "The code works!!!",
+    "I'm tired...",
+    "Back to the mines I go (coding more than writing the story)."
     // Add more chapter content here
 ];
 
