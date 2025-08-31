@@ -17,19 +17,22 @@ header {
     text-align: center;
 }
 
-/* Chapter Slider */
-.chapter-slider {
+/* Chapter Dropdown */
+.chapter-dropdown {
     margin: 20px 0;
 }
 
-.chapter-slider input {
-    width: 80%;
-    margin-top: 10px;
+.chapter-dropdown select {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.chapter-slider span {
-    font-size: 1.2em;
-    margin-left: 10px;
+.chapter-dropdown select:hover {
+    background-color: #666;
 }
 
 /* Content Section */
