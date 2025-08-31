@@ -1,61 +1,79 @@
-/* Basic styling */
+/* Basic Styling */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333333;  /* Default background color */
-    color: #000000;  /* Default text color */
+    background-color: #d3d3d3;  /* Light Gray Background */
+    color: #333333;  /* Dark Gray Text */
+    text-align: center;
 }
 
+/* Novel Title */
 header {
     background-color: #333;
     color: white;
     padding: 20px;
+    font-size: 2em;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+/* Chapter Slider */
+.chapter-slider {
+    margin: 20px 0;
 }
 
-nav {
+.chapter-slider input {
+    width: 80%;
     margin-top: 10px;
 }
 
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+.chapter-slider span {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+/* Content Section */
+#content {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Images on the Sides */
+body {
+    background-image: url('https://via.placeholder.com/500x500'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 0;
 }
 
 #content {
-    padding: 20px;
-    font-size: 18px;
-    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.8);  /* Transparent white background */
+    padding: 30px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 10%;
 }
 
-.controls {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-.controls button {
-    padding: 10px 15px;
+button {
+    padding: 10px 20px;
     background-color: #444;
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
-.controls button:hover {
+button:hover {
     background-color: #666;
 }
