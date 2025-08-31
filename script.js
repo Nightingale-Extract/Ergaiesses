@@ -1,24 +1,23 @@
-function changeTextColor() {
-    const colors = ['#000000', '#FF5733', '#3498db', '#2ecc71', '#9b59b6'];
-    const currentColor = document.body.style.color;
-    let nextColor = colors[(colors.indexOf(currentColor) + 1) % colors.length];
-    document.body.style.color = nextColor;
-}
-
-function changeBackgroundColor() {
-    const colors = ['#ffffff', '#ecf0f1', '#bdc3c7', '#34495e'];
-    const currentColor = document.body.style.backgroundColor;
-    let nextColor = colors[(colors.indexOf(currentColor) + 1) % colors.length];
-    document.body.style.backgroundColor = nextColor;
-}
-
-function changeBackgroundImage() {
-    const images = [
-        'url("https://via.placeholder.com/1500x800/ff7f7f/333333?text=Background+1")',
-        'url("https://via.placeholder.com/1500x800/7f7fff/333333?text=Background+2")',
-        'url("https://via.placeholder.com/1500x800/7fff7f/333333?text=Background+3")'
+// Update chapter title when slider moves
+function updateChapter() {
+    let chapterNumber = document.getElementById("chapter-slider").value;
+    let chapterTitle = "Chapter " + chapterNumber + ": ";
+    let titles = [
+        "The Beginning", "A Dark Reunion", "The Secret Unfolds", 
+        "Shadows in the Night", "A New Hope", "The Betrayal", 
+        "Revenge", "The Fall", "The Redemption", "The Final Hour"
     ];
-    const currentImage = document.body.style.backgroundImage;
-    let nextImage = images[(images.indexOf(currentImage) + 1) % images.length];
-    document.body.style.backgroundImage = nextImage;
+    document.getElementById("chapter-title").textContent = chapterTitle + titles[chapterNumber - 1];
+}
+
+// Change chapter based on button click
+function changeChapter(direction) {
+    let slider = document.getElementById("chapter-slider");
+    let newValue = parseInt(slider.value) + direction;
+    
+    // Ensure we don't go out of bounds
+    if (newValue >= 1 && newValue <= 10) {
+        slider.value = newValue;
+        updateChapter();
+    }
 }
